@@ -1,0 +1,58 @@
+
+<!--div id="wrap"-->
+
+  <!-- Begin page content -->
+  <div class="container">
+    <div class="page-header">
+     <div style= "float:left;"><h1>Capitales por comunidad</h1></div>
+      <div style= "float:right;">
+          <button class="btn btn-info btn-mini btn_home" type="button"><i class="icon-home icon-white"></i>Home</button>
+      </div>
+    </div>
+    <p class="lead">Estas son las capitales de la comunidad seleccionada:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Capital de Provincia</th>
+        </tr>
+      </thead>
+      <tbody>
+      <%sessionStorage.comboCommunities%>
+      <%
+        _.each(obj,function(autonomie){%> <!-- En obj recibo el objeto JSON con todas las provincias por autonomia, y recorro cada objeto con el pseudonimo pasado como parametro (auntonimie) -->
+          
+            <%if (autonomie.nom_comunidades == sessionStorage.comboCommunities){%>
+              
+                 <tr>
+                  <td>
+                    <p><%- autonomie.nom_provincias %></p>
+                     <%if (autonomie.nom_provincias == 'Ciudad Real'){%>
+                         <button class="btn btn-info btn-mini CiudadReal history" type="button" name="<%- autonomie.nom_provincias %>"><i class="icon-info-sign icon-white"></i>Historia</button>
+                      <%}else {%>
+                   
+                    <button class="btn btn-info btn-mini <%- autonomie.nom_provincias %> history" type="button"  name="<%- autonomie.nom_provincias %>"><i class="icon-info-sign icon-white"></i>Historia</button>
+                   <% }%>
+                  </td>
+                  <td><a href=<%- autonomie.imagen %>  class="external"><img src=<%- autonomie.imagen %> height="100" width="100" title="Click para ver en tamaño original"></a></td>
+                 
+                </tr>
+              
+            <%}%>
+            
+        <%});
+      %>
+      </tbody>
+    </table>
+  </div>
+
+  <!--div id="push"></div-->
+ <!--/div-->
+
+
+<footer class="footer">
+  <div class="container">
+    <p>Practicando con backbone y node.js <a href="http://inquietomanuel.blogspot.com.es/"> Accede a mi blog</a> --Manuel Recuero--</p>
+  </div> 
+</footer>
+
+
