@@ -7,7 +7,7 @@ define([
   'text!templates/guadalajaraTemplate.html',
   'i18n!internalization/nls/i18n',
 ], function($, _, Backbone, GuadalajaraTemplate){
-  var ToledoHistoryView = Backbone.View.extend({
+  var GuadalajaraHistoryView = Backbone.View.extend({
     el: 'body',
     initialize: function()
 	  {
@@ -27,5 +27,5 @@ define([
 
 	});
 
-  return ToledoHistoryView;
+  return GuadalajaraHistoryView;
 });

@@ -7,7 +7,7 @@ define([
   'text!templates/albaceteTemplate.html',
   'i18n!internalization/nls/i18n',
 ], function($, _, Backbone, AlbaceteTemplate){
-  var ToledoHistoryView = Backbone.View.extend({
+  var AlbaceteHistoryView = Backbone.View.extend({
     el: 'body', 
     
     initialize: function()
@@ -28,5 +28,5 @@ define([
 
 	});
 
-  return ToledoHistoryView;
+  return AlbaceteHistoryView;
 });

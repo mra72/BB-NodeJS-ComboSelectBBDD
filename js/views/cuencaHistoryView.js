@@ -7,7 +7,7 @@ define([
   'text!templates/cuencaTemplate.html',
   'i18n!internalization/nls/i18n',
 ], function($, _, Backbone, CuencaTemplate){
-  var ToledoHistoryView = Backbone.View.extend({
+  var CuencaHistoryView = Backbone.View.extend({
     el: 'body', 
     
     initialize: function()
@@ -28,5 +28,5 @@ define([
 
 	});
 
-  return ToledoHistoryView;
+  return CuencaHistoryView;
 });

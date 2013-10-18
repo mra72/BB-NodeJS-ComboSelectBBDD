@@ -39,7 +39,7 @@ var connection = mysql.createConnection(
       // Aqui los datos de conexion a mySql que correspondan
       host     : 'localhost',
       user     : 'root',
-      password : 'XXXXXXX',
+      password : 'Manuel_72',
       database : 'Autonomias',
     }
 );
